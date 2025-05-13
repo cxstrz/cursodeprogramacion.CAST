@@ -1,0 +1,86 @@
+
+
+
+
+
+
+#sudo dpkg --configure -a
+#sudo apt- install python3-pygame
+
+import math
+import random
+import pygame
+
+from pygame import mixer 
+
+#inicio del juego
+pygame.int()
+
+#se crea el fondo de pantalla
+screen = pygame.display.ser_mode((1000,800))
+
+#fondo de pantalla
+background = pygame.image.load('/home/pc06/Juego Progra/FONDO.PNG')
+
+#sonido de fondo
+mixer.music.lead('/home/pc06/Juego Progra/UTF-8background.wav')
+mixer.music.play(-1)
+
+#titulo e icono
+pygame.display.set_capition('Las aventuras de Tripi Tropi')
+icon = pygame.image.load('/home/pc06/Juego Progra/ENEMIGO1.PNG')
+pygame.display.set.icon(icon)
+
+#jugador
+PlayerImg = pygame.image.load('/home/pc06/Juego Progra/NAVE.PNG')
+playerX=370
+playerY=480
+playerX_change=0
+
+#enemigos
+enemyImg=[]
+enemyX=[]
+enemyY=[]
+enemyX_change=[]
+enemyY_change=[]
+num_of_enemies= 50
+
+for i in range(num_of_enemies):
+    enemyImg.append(pygame.image.load('/home/pc06/Juego Progra/ENEMIGO1.PNG'))
+    enemyX.append(random.randint(0.736))
+    enemyY.append(random.randit(50, 150))
+    enemyX_change.append(4)
+    enemyY_change.append(40)
+
+#disparo, proyectil, bala
+
+armaImg= pygame.image.load('/home/pc06/Juego Progra/ESPADA-removebg-preview.png')
+armaX=0
+armaY=480
+armaX_change=0
+armaY_change=0
+arma_estado='ready'
+
+#puntaje
+
+score_value=0
+font=pygame.font.Font('/home/pc06/Juego Progra/unageo(1).zip')
+
+
+textX=10
+textY=10
+
+#juego terminado(game over)
+over_font=pygame.font.Font('/home/pc06/Juego Progra/unageo(1).zip')
+
+def show_puntaje(x,y):
+    score=font.render("score"+str(score_value).true,(255,255,255))
+    screen.blit(score,(x,y))
+def gameover_text():
+    over_text=over_font.render("Game over",True,255,255,255)
+    screen.blit(over_text,(200,250))
+def player(x,y):
+    screen.blit(PlayerImg,(x,y))
+def enemy(x,y,i):
+    screen.blit(enemyImg[1],(x,y))
+def 
