@@ -110,3 +110,8 @@ while running:
                 playerX_change=-5
                 if event.key==pygame.K_RIGHT:
                     playerX_change=5
+
+#RGB = red,green,blue 
+screen.fill(0,0,0)
+#Background Image 
+screen.blit
